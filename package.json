@@ -56,5 +56,6 @@
     "prepublishOnly": "git push origin --follow-tags",
     "format": "prettier --write . --loglevel warn --cache",
     "typedoc": "typedoc"
-  }
+  },
+  "license": "BlueOak-1.0.0"
 }
