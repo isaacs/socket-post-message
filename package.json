@@ -1,5 +1,6 @@
 {
   "name": "socket-post-message",
+  "files": ["dist"],
   "version": "1.0.0",
   "devDependencies": {
     "@types/node": "^20.8.7",
