@@ -55,6 +55,6 @@
     "postversion": "npm publish",
     "prepublishOnly": "git push origin --follow-tags",
     "format": "prettier --write . --loglevel warn --cache",
-    "typedoc": "typedoc --tsconfig tsconfig/esm.json ./src/*.ts"
+    "typedoc": "typedoc"
   }
 }
