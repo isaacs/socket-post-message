@@ -1,6 +1,7 @@
 import { Serializable } from 'node:child_process'
 import EventEmitter from 'node:events'
 import { message, Reader } from './message.js'
+export { message, Reader }
 
 export interface StreamLike {
   write(chunk: Buffer): boolean
