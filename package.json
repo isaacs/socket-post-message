@@ -1,0 +1,62 @@
+{
+  "name": "socket-post-message",
+  "version": "0.0.0-0",
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "minipass": "^7.0.4",
+    "prettier": "^2.8.8",
+    "tap": "^18.5.2",
+    "tshy": "^1.6.0"
+  },
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  },
+  "main": "./dist/commonjs/index.js",
+  "types": "./dist/commonjs/index.d.ts",
+  "type": "module",
+  "prettier": {
+    "semi": false,
+    "printWidth": 70,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf"
+  },
+  "scripts": {
+    "prepare": "tshy",
+    "presnap": "npm run prepare",
+    "pretest": "npm run prepare",
+    "snap": "tap",
+    "test": "tap",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags",
+    "format": "prettier --write . --loglevel warn --cache",
+    "typedoc": "typedoc --tsconfig tsconfig/esm.json ./src/*.ts"
+  },
+  "tap": {
+    "coverage-map": "map.js"
+  },
+  "dependencies": {
+    "typedoc": "^0.25.2"
+  }
+}
