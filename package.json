@@ -9,7 +9,8 @@
     "minipass": "^7.0.4",
     "prettier": "^2.8.8",
     "tap": "^18.5.2",
-    "tshy": "^1.6.0"
+    "tshy": "^1.6.0",
+    "typedoc": "^0.25.2"
   },
   "tshy": {
     "exports": {
@@ -55,8 +56,5 @@
     "prepublishOnly": "git push origin --follow-tags",
     "format": "prettier --write . --loglevel warn --cache",
     "typedoc": "typedoc --tsconfig tsconfig/esm.json ./src/*.ts"
-  },
-  "dependencies": {
-    "typedoc": "^0.25.2"
   }
 }
