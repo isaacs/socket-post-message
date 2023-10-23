@@ -33,6 +33,12 @@ but that's pretty rare.)
 
 ## USAGE
 
+Install it with npm
+
+```
+npm install socket-post-message
+```
+
 In the server:
 
 ```js
